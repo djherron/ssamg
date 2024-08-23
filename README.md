@@ -11,6 +11,7 @@ dataset name: 114000 Spotify Songs
   - 4 of these are string names, so are of no use
   - 2 of the remaining 15 features are categorical, one with 12 levels and one with 5 levels; if we imagine converting these two categorical features to binary features (12 and 5, respectively), we would have 13 + 12 + 5 = 30 features
 * classes: 114  (114 unique music genres)
+  - we don't have to use them all; we can choose a subset of genres that help to form an interesting music genre class hierarchy
   - the Kaggle page for the dataset says the dataset has 125 genre classes, but this is inaccurate. Analysis of the dataset shows that the data samples refer to 114 unique genres
 * balance: each of the 114 music genres has exactly 1000 data samples
 
