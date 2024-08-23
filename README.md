@@ -44,8 +44,8 @@ datawrangling
 `MusicGenres.ttl`
 * a custom OWL class hierarchy of music genres
 * it's just an example or starting point for modification and/or reduction or extension
-* current total number of classes: 43
-* current number of SpotifySongs dataset base classes: 20
+* current number of base classes (track_genres) from SpotifySongs dataset: 20
+* current total number of classes in hierarchy: 43
 * the corresponding subset of the SpotifySongs dataset would have 20 * 1000 = 20,000 data samples
 
 `MusicGenres_class_hierarchy.png`

@@ -1,0 +1,235 @@
+@prefix : <http://www.example.com/ontologies/musicGenres#/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.example.com/ontologies/musicGenres#/> .
+
+<http://www.example.com/ontologies/musicGenres#> rdf:type owl:Ontology .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.example.com/ontologies/musicGenres#African
+:African rdf:type owl:Class ;
+         rdfs:subClassOf :World .
+
+
+###  http://www.example.com/ontologies/musicGenres#AfricanEDM
+:AfricanEDM rdf:type owl:Class ;
+            rdfs:subClassOf :DanceEMD ,
+                            :EthnicElectronica .
+
+
+###  http://www.example.com/ontologies/musicGenres#Afrobeat
+:Afrobeat rdf:type owl:Class ;
+          rdfs:subClassOf :African ,
+                          :AfricanEDM .
+
+
+###  http://www.example.com/ontologies/musicGenres#Ambient
+:Ambient rdf:type owl:Class ;
+         rdfs:subClassOf :Downtempo .
+
+
+###  http://www.example.com/ontologies/musicGenres#Bluegrass
+:Bluegrass rdf:type owl:Class ;
+           rdfs:subClassOf :Country .
+
+
+###  http://www.example.com/ontologies/musicGenres#Brazilian
+:Brazilian rdf:type owl:Class ;
+           rdfs:subClassOf :Latin .
+
+
+###  http://www.example.com/ontologies/musicGenres#Caribbean
+:Caribbean rdf:type owl:Class ;
+           rdfs:subClassOf :World .
+
+
+###  http://www.example.com/ontologies/musicGenres#ChillOut
+:ChillOut rdf:type owl:Class ;
+          rdfs:subClassOf :Electronic .
+
+
+###  http://www.example.com/ontologies/musicGenres#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf :Popular .
+
+
+###  http://www.example.com/ontologies/musicGenres#Cuban
+:Cuban rdf:type owl:Class ;
+       rdfs:subClassOf :Caribbean .
+
+
+###  http://www.example.com/ontologies/musicGenres#DanceEMD
+:DanceEMD rdf:type owl:Class ;
+          rdfs:subClassOf :Electronic .
+
+
+###  http://www.example.com/ontologies/musicGenres#DeathMetal
+:DeathMetal rdf:type owl:Class ;
+            rdfs:subClassOf :Metal .
+
+
+###  http://www.example.com/ontologies/musicGenres#DeepHouse
+:DeepHouse rdf:type owl:Class ;
+           rdfs:subClassOf :House .
+
+
+###  http://www.example.com/ontologies/musicGenres#DetroitTechno
+:DetroitTechno rdf:type owl:Class ;
+               rdfs:subClassOf :Techno .
+
+
+###  http://www.example.com/ontologies/musicGenres#Downtempo
+:Downtempo rdf:type owl:Class ;
+           rdfs:subClassOf :ChillOut .
+
+
+###  http://www.example.com/ontologies/musicGenres#Electronic
+:Electronic rdf:type owl:Class ;
+            rdfs:subClassOf :Popular .
+
+
+###  http://www.example.com/ontologies/musicGenres#EthnicElectronica
+:EthnicElectronica rdf:type owl:Class ;
+                   rdfs:subClassOf :Electronic .
+
+
+###  http://www.example.com/ontologies/musicGenres#Flamenco
+:Flamenco rdf:type owl:Class ;
+          rdfs:subClassOf :Hispanic .
+
+
+###  http://www.example.com/ontologies/musicGenres#Garage
+:Garage rdf:type owl:Class ;
+        rdfs:subClassOf :House .
+
+
+###  http://www.example.com/ontologies/musicGenres#GoldenAge
+:GoldenAge rdf:type owl:Class ;
+           rdfs:subClassOf :Rock .
+
+
+###  http://www.example.com/ontologies/musicGenres#Grindcore
+:Grindcore rdf:type owl:Class ;
+           rdfs:subClassOf :Metal ,
+                           :Punk .
+
+
+###  http://www.example.com/ontologies/musicGenres#Hispanic
+:Hispanic rdf:type owl:Class ;
+          rdfs:subClassOf :Latin .
+
+
+###  http://www.example.com/ontologies/musicGenres#House
+:House rdf:type owl:Class ;
+       rdfs:subClassOf :DanceEMD .
+
+
+###  http://www.example.com/ontologies/musicGenres#Jamaican
+:Jamaican rdf:type owl:Class ;
+          rdfs:subClassOf :Caribbean .
+
+
+###  http://www.example.com/ontologies/musicGenres#Latin
+:Latin rdf:type owl:Class ;
+       rdfs:subClassOf :World .
+
+
+###  http://www.example.com/ontologies/musicGenres#Metal
+:Metal rdf:type owl:Class ;
+       rdfs:subClassOf :Popular .
+
+
+###  http://www.example.com/ontologies/musicGenres#MinimalTechno
+:MinimalTechno rdf:type owl:Class ;
+               rdfs:subClassOf :Techno .
+
+
+###  http://www.example.com/ontologies/musicGenres#Popular
+:Popular rdf:type owl:Class ;
+         rdfs:subClassOf :TopGenre .
+
+
+###  http://www.example.com/ontologies/musicGenres#PsychRock
+:PsychRock rdf:type owl:Class ;
+           rdfs:subClassOf :GoldenAge .
+
+
+###  http://www.example.com/ontologies/musicGenres#PuertoRican
+:PuertoRican rdf:type owl:Class ;
+             rdfs:subClassOf :Caribbean .
+
+
+###  http://www.example.com/ontologies/musicGenres#Punk
+:Punk rdf:type owl:Class ;
+      rdfs:subClassOf :Rock .
+
+
+###  http://www.example.com/ontologies/musicGenres#Reggae
+:Reggae rdf:type owl:Class ;
+        rdfs:subClassOf :Jamaican ,
+                        :Popular .
+
+
+###  http://www.example.com/ontologies/musicGenres#Reggaeton
+:Reggaeton rdf:type owl:Class ;
+           rdfs:subClassOf :Reggae .
+
+
+###  http://www.example.com/ontologies/musicGenres#Rock
+:Rock rdf:type owl:Class ;
+      rdfs:subClassOf :Popular .
+
+
+###  http://www.example.com/ontologies/musicGenres#Salsa
+:Salsa rdf:type owl:Class ;
+       rdfs:subClassOf :Cuban ,
+                       :PuertoRican .
+
+
+###  http://www.example.com/ontologies/musicGenres#Samba
+:Samba rdf:type owl:Class ;
+       rdfs:subClassOf :Brazilian .
+
+
+###  http://www.example.com/ontologies/musicGenres#Sertanejo
+:Sertanejo rdf:type owl:Class ;
+           rdfs:subClassOf :Brazilian ,
+                           :Country .
+
+
+###  http://www.example.com/ontologies/musicGenres#Ska
+:Ska rdf:type owl:Class ;
+     rdfs:subClassOf :Jamaican .
+
+
+###  http://www.example.com/ontologies/musicGenres#Tango
+:Tango rdf:type owl:Class ;
+       rdfs:subClassOf :Flamenco .
+
+
+###  http://www.example.com/ontologies/musicGenres#Techno
+:Techno rdf:type owl:Class ;
+        rdfs:subClassOf :DanceEMD .
+
+
+###  http://www.example.com/ontologies/musicGenres#TopGenre
+:TopGenre rdf:type owl:Class .
+
+
+###  http://www.example.com/ontologies/musicGenres#TripHop
+:TripHop rdf:type owl:Class ;
+         rdfs:subClassOf :Downtempo .
+
+
+###  http://www.example.com/ontologies/musicGenres#World
+:World rdf:type owl:Class ;
+       rdfs:subClassOf :TopGenre .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
