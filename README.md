@@ -23,15 +23,19 @@ available at:
 * a script for getting familiar with the dataset
 * performs some rudimentary exploratory data analysis
 * feel free to use it as a starting point for evaluating the dataset
-* download the dataset; place it somewhere on your local drive; adjust the directory locations in the script; run each section and inspect the results written to your console
+* download the dataset; place it somewhere on your local drive; adjust the directory locations in the script; run the script section-by-section and inspect the results written to your IDE's console
 
 `The 114 track genres.txt`
-* a listing of the 114 track genres (classes) in the dataset
+* a listing of the 114 unique track genres (classes) in the dataset
 
-the idea behind working with this dataset
-* 114 classes (music genres) is more than we need or want, but that's ok, we don't need to use the whole dataset; we can select a subset whose shape we like
-* because the dataset is so nicely balanced, we can select whichever subset of music genres we prefer and still have a perfectly balanced dataset with enough data that we can safely split the master subset into training, validation and test subsets
-* the domain of music genres lends itself to class hierarchy creation; the domain is both flexible and familiar; crafting a reasonable companion music genre class hierarchy looks feasible
+why this dataset feels like a good candidate:
+* for me, the dataset has several attractive features that suit our needs
+* 114 classes (music genres) is a lot, but that's ok: we don't need to use them all; we can select a subset of music genres that a) gives us a moderate number of (base) classes and b) facilitates the quick design of a custom class hierarchy of suitable size, variety and complexity
+* music genre classification is a domain that's flexible and familiar; our prospects for designing a custom music genre class hierarchy that fits the dataset and our experimental needs (for reasonable variety and complexity in the generalisation implied by the hierarchy) are good
+* each music genre has exactly 1000 data samples; so no matter which subset of music genres we select, we'll still have a perfectly balanced dataset in the end; so we've got full freedom to choose a subset of music genres that facilitate the design of a class hierarchy with characteristics we like and want
+* if we select something on the order of, say, N=20 music genres (base classes), we'll have a dataset of 20,000 samples; that leaves plenty of scope for further splitting the data into reasonably-sized (and balanced) training, validation and test sets
+* a dataset of 20,000 to 30,000 samples, say, should mean training will still be fast and easy on laptops; no need to mess with GPUs and cloud platforms and long training turn-around times
+* the flat, friendly features of this tabular dataset mean that much of the code and experiments already in place should be little impacted by migrating from the Zoo dataset 
 
 datawrangling
 * the exploratory data analysis suggests some data wrangling of the input features may be appropriate
@@ -42,15 +46,17 @@ datawrangling
 # The MusicGenres OWL class hierarchy
 
 `MusicGenres.ttl`
-* a custom OWL class hierarchy of music genres
-* it's just an example or starting point for modification and/or reduction or extension
-* current number of base classes (track_genres) from SpotifySongs dataset: 20
-* current total number of classes in hierarchy: 43
-* the corresponding subset of the SpotifySongs dataset would have 20 * 1000 = 20,000 data samples
+* an initial attempt at a custom OWL class hierarchy of music genres
+* we can try it as-is, or use it as a starting point for further development
+* current total number of classes (music genres) in the hierarchy: 43
+* many of the classes (music genres) in the hierarchy map directly to track_genres in the SpotifySongs dataset; but, as is reflected in the class hierarchy visualisation (by class names surrounded with borders), we are currently proposing that only 17 of the genres be included in our subset of the SpotifySongs dataset
+* the corresponding subset of the SpotifySongs dataset would have 17 * 1000 = 17,000 data samples
+* the class hierarchy adjacency matrix would be 43 x 43
 
 `MusicGenres_class_hierarchy.png`
 * a visualisation of the MusicGenres OWL class hierarchy
 ![MusicGenres](MusicGenres_class_hierarchy.png "MusicGenres OWL class hierarchy")
+* class names surrounded with borders indicate the genres from the SpotifySongs dataset that we propose be included in our subset of the dataset
 
 Influences that helped shape the design of the MusicGenres OWL class hierarchy
 * https://musicmap.info/
