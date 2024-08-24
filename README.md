@@ -1,15 +1,15 @@
 # Spotify Songs and Music Genres
 
-This repo describes a tabular classification dataset and a companion, custom OWL ontology class hierarchy.
+This repo describes a tabular classification dataset and a companion, custom OWL ontology class hierarchy.  In lieu of graduating from the Zoo dataset to the NeSy4VRD image dataset, one attractive option is to graduate to the '114000 Spotify Songs' dataset for which we can fashion our own custom music genre class hierarchy.
 
 # The Spotify Songs dataset
 
 dataset name: 114000 Spotify Songs
-* a tabular dataset whose features describe characteristics of songs on Spotify
+* a **tabular dataset** whose features describe characteristics of songs on Spotify
 * the objective is to classify the songs according to their **music genre**
 * features: 19
   - 4 of these are string names, so are of no use
-  - 2 of the remaining 15 features are categorical, one with 12 levels and one with 5 levels; if we imagine converting these two categorical features to binary features (12 and 5, respectively), we would have 13 + 12 + 5 = 30 features
+  - 2 of the remaining 15 features are categorical, one with 12 levels and one with 5 levels; if we imagine converting each of these two categorical features to multiple binary features (12 and 5, respectively), we would have 13 + 12 + 5 = 30 relevant input features
 * classes: 114  (114 unique music genres)
   - we don't have to use them all; we can choose a subset of genres that help to form an interesting music genre class hierarchy
   - the Kaggle page for the dataset says the dataset has 125 genre classes, but this is inaccurate. Analysis of the dataset shows that the data samples refer to 114 unique genres
@@ -65,7 +65,10 @@ Influences that helped shape the design of the MusicGenres OWL class hierarchy
   - a list (hierarchy) of music genres and styles
 * hierarchy depth considerations: from amongst the 114 music genres in the dataset, we had a preference for those base classes that we can place deep within a class hierarchy --- i.e. so that they have multiple parent classes
 * hierarchy width considerations: from amongst the 114 music genres in the dataset, we selected base classes that give a wide variety of different subsumption paths in the hierarchy; that is, we want different base classes to have differences in their sets of parent classes
-* hierarchy variety considerations: in a class hierarchy, it's valid for any given class to have more than one direct parent class; so we selected base classes from the SpotifySongs dataset partly based on the opportunities they created for defining instances of multiple parentage in the class hierarchy
+* hierarchy variety and complexity considerations: in a class hierarchy, it's valid for any given class to have more than one direct parent class; so we selected base classes from the SpotifySongs dataset partly based on the opportunities they presented for defining instances of multiple parentage in the class hierarchy
 * personal bias
+
+
+
 
 
